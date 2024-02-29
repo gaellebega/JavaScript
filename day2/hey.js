@@ -33,6 +33,7 @@ for (let key in person) {
 
 
 // }
+// day3
 let array =
  [[2,3,7,8,9],
  [1,3,2,8],
@@ -61,6 +62,7 @@ let primary = {
   };
   console.log(group.hardworkers.teen);
   console.log(group.lazy.older);  
+// day 4
 
 let room = ["fofo","gaga","nana","sisi"];
 room.push("mumu");
@@ -124,6 +126,41 @@ console.log( combineArray);
 let duplicates = [1,1,2,3,4,5,5];
 let uniqueArray = [...new Set(duplicates)];
 console.log(uniqueArray);
+
+let mixedArray = [1,"hello",true,4.5];
+let arrayAsString = mixedArray.join(",");
+console.log(arrayAsString);
+
+let maxNumbers = [1,3,90,30,17,58,827]
+let max=Math.max(...maxNumbers);
+console.log(max);
+
+
+let groupedNumbers = group1.reduce((acc, num) => {
+    acc[num % 2 === 0 ? "even" : "odd"].push(num);
+    return acc;
+  }, { even: [], odd: [] });
+  console.log(groupedNumbers);
+
+  let names = "muco pivot".split("");
+  console.log(names);
+
+  let helloArray = ["Hello", "World!"];
+  let reversedHelloArray = helloArray.reverse();
+   console.log(reversedHelloArray);
+
+   let sentence = "I love JavaScript JavaScript is awesome!";
+   let wordCount = sentence.split(" ").reduce((acc, word) => {
+     acc[word] = (acc[word] || 0) + 1;
+     return acc;
+   }, {});
+   console.log(wordCount);
+
+   let fr = ["banana","apple","coconat"];
+   let replacedFruits = fr.map(fr => fr === "apple" ? "orange" : fr);
+   console.log(replacedFruits);
+   
+
 
 
 
